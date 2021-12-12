@@ -13,4 +13,12 @@ node('jenkins-slave-1') {
 	stage("Build") {
 		sh "mvn clean package"
 	}
+	
+	stage('Email Notification') {
+		mail bcc: '', body: '''This is a test email ${env.BUILD_NUMBER} sent from Jenkins 
+Thanks,
+Mangesh Shinde''', cc: 'jadhavvarsha257@gmail.com', from: '', replyTo: '', subject: 'Jenkins Jobs Build Status', to: 'mangeshrs91@gmail.com'
+	}
+	
+	
 }	 
