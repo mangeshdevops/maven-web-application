@@ -15,9 +15,9 @@ node('jenkins-slave-1') {
 	}
 	
 	stage('Email Notification') {
-		mail bcc: '', body: '''This is a test email ${env.BUILD_NUMBER} sent from Jenkins 
+		mail bcc: '', body: '''"This is a test email ${env.BUILD_NUMBER} sent from Jenkins"
 Thanks,
-Mangesh Shinde''', cc: 'jadhavvarsha257@gmail.com', from: '', replyTo: '', subject: 'Jenkins Jobs Build Status', to: 'mangeshrs91@gmail.com'
+Mangesh Shinde''', cc: 'jadhavvarsha257@gmail.com', from: '', replyTo: '', subject: 'Jenkins Job Build Status', to: 'mangeshrs91@gmail.com'
 	}
 	
 	
