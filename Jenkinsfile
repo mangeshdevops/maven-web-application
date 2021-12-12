@@ -1,5 +1,4 @@
 node {
-	def mavenHome = tool name: "maven3.6.0"
 	echo "GitHub BranhName ${env.BRANCH_NAME}"
 	echo "Jenkins Job Number ${env.BUILD_NUMBER}"
 	echo "Jenkins Node Name ${env.NODE_NAME}"
@@ -12,6 +11,6 @@ node {
 	}
 	
 	stage("Build") {
-		sh "${mavenHome}/bin/mvn clean package"
+		sh "mvn clean package"
 	}
 }	 
